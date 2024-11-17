@@ -1,40 +1,15 @@
-This is the original `com.eaio.uuid`, and you can now create pull requests for features that you've implemented yourself. :)
+# uuid
 
-# UUID
 ## Generate UUIDs (or GUIDs) in Java
 
-This is an implementation of the UUIDs and GUIDs specification in Java. UUIDs are 128 bit long identifiers that are guaranteed to be unique.
-
-## Download
-
-[Download UUID 3.5 (JAR)](https://repo.eaio.com/maven2/com/eaio/uuid/uuid/3.5/uuid-3.5.jar)
-
-[Download UUID 3.5 (Source JAR)](https://repo.eaio.com/maven2/com/eaio/uuid/uuid/3.5/uuid-3.5-sources.jar)
-
-Or get UUID through Maven:
-
-```XML
-    <dependencies>
-        <dependency>
-            <groupId>com.eaio.uuid</groupId>
-            <artifactId>uuid</artifactId>
-            <version>3.5</version>
-        </dependency>
-    </dependencies>
-…
-    <repositories>
-        <repository>
-            <id>eaio.com</id>
-            <url>https://repo.eaio.com/maven2</url>
-        </repository>
-    </repositories>
-```
+This implements the UUIDs and GUIDs specification in Java. UUIDs are 128-bit identifiers guaranteed to be unique.
 
 ## Documentation
 
-A UUID (or GUID) is a unique identifier that can be created whithout a central authority. UUIDs can be used if a sequence number is not good enough. This implementation is thread safe and very fast.
+A UUID (or GUID) is a unique identifier that can be created without a central authority. UUIDs can be used if a
+sequence number is not good enough. This implementation is thread safe and very fast.
 
-UUID generates version 1 UUIDs that contain the the MAC address of a network card.
+UUID generates version 1 UUIDs that contain the MAC address of a network card.
 
 UUID is licensed under the MIT License (OSI certified).
 
@@ -82,12 +57,9 @@ And parsing from Strings:
 UUID u = new UUID("00000000-0000-002a-0000-00000000002a");
 ```
 
-Keep in mind that this UUID implementation has public field, so cloning should be used for security purposes between in-VM system boundaries.
+Keep in mind that this UUID implementation has public field, so cloning should be used for security purposes between
+in-VM system boundaries.
 
 ## Other resources
 
-* [UUID on johannburkard.de](https://johannburkard.de/software/uuid/)
-* [Maven-generated Site](https://johannburkard.de/software/uuid/site/)
-* [APIdoc](https://johannburkard.de/software/uuid/site/apidocs/)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-7427410-89/UUID/README.md?pixel)](https://github.com/igrigorik/ga-beacon)
+* [UUID on johannburkard.de](https://johannburkard.de/software/uuid/) the upstream project this is derived from.
