@@ -27,7 +27,7 @@
  */
 package com.eaio.uuid;
 
-import static com.eaio.util.Resource.close;
+import static com.eaio.uuid.Resource.close;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.*;

@@ -27,7 +27,7 @@
  */
 package com.eaio.uuid;
 
-import static com.eaio.util.Resource.close;
+import static com.eaio.uuid.Resource.close;
 
 import java.io.BufferedReader;
 import java.io.File;
