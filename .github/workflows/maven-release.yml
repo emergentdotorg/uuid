@@ -1,24 +1,22 @@
 name: Maven Release
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
   workflow_dispatch:
-    inputs:
-      next-release-version:
-        description: 'Next Release Version'
-      next-snapshot-version:
-        description: 'Next Snapshot Version'
-      dry-run:
-        description: 'Dry-run'
-        type: boolean
-        required: false
-        default: false
 
 jobs:
-  call-workflow:
-    uses: emergentdotorg/github-actions/.github/workflows/reusable-maven-release.yml@1
+  invoke-release:
+    uses: emergentdotorg/github-actions/.github/workflows/reusable-maven-release.yml@main
+    secrets: inherit
     with:
       java-version: '8'
-      next-release-version: ${{ inputs.next-release-version }}
-      next-snapshot-version: ${{ inputs.next-snapshot-version }}
-      dry-run: ${{ inputs.dry-run }}
-    secrets: inherit
+
+  process-results:
+    runs-on: ubuntu-latest
+    needs: invoke-release
+    steps:
+      - run: echo version=${{ needs.invoke-release.outputs.version }}
